@@ -14,9 +14,7 @@ const errorHandler = require('./middleware/error');
 dotenv.config({ path: './config/config.env.env' });
 
 // Route files
-// const auth = require('./routes/auth');
-// const inventory = require('./routes/inventory');
-// const order = require('./routes/order');
+const scraper = require('./routes/scraper');
 
 const app = express();
 
@@ -50,9 +48,7 @@ app.use(hpp());
 app.use(cors());
 
 // Mount routers
-// app.use('/api/v1/auth', auth);
-// app.use('/api/v1/inventory', inventory);
-// app.use('/api/v1/order', order);
+app.use('/api/v1/scrape', scraper);
 
 app.use(errorHandler);
 
