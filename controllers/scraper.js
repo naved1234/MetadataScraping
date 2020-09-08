@@ -2,7 +2,7 @@ const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 const Meta = require('html-metadata-parser');
 const NodeCache = require( "node-cache" );
-const cache = new NodeCache( { stdTTL: 1000, checkperiod: 100 } );
+const cache = new NodeCache( { stdTTL: 1000, checkperiod: 500 } );
 
 // @desc      Scrape data from url
 // @route     POST /api/v1/scrape
